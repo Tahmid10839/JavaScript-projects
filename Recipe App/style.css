@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c9d6ff;
+  background: -webkit-linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  );
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+.mobile-container {
+  width: 400px;
+  height: 650px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  /* margin: 100px 0; */
+  overflow: auto;
+}
+/* .mobile-container:hover{
+  overflow: auto;
+} */
+img {
+  max-width: 100%;
+}
+header{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header input{
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #eee;
+  outline: none;
+  font-family: inherit;
+}
+header button{
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+.fav-container{
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgb(231, 226, 226);
+}
+.fav-container h3{
+  margin: 0;
+}
+.fav-meals{
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.fav-meals li{
+  margin: 5px;
+  width: 80px;
+  position: relative;
+}
+.fav-meals li .clear{
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  border: none;
+  cursor: pointer;
+}
+.fav-meals li:hover .clear{
+  opacity: 1;
+}
+.fav-meals li img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.fav-meals li .mealname{
+  font-size: 0.8rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 75px;
+  display: inline-block;
+}
+.fav-meals li .mealtoast{
+  background-color: rgb(39, 34, 34);
+  color: white;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  font-size: 13px;
+  padding: 0.5rem;
+  display: none;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.fav-meals li:hover .mealtoast{
+  display: block;
+}
+.fav-meals li:nth-child(4n+1) .mealtoast{
+  bottom: -10px;
+  left: 10px;
+}
+.fav-meals li:nth-child(4n) .mealtoast{
+  bottom: -10px;
+  left: -100px;
+}
+.meal{
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* cursor: pointer; */
+}
+.meal-header{
+  position: relative;
+}
+.meal-header .random{
+  position: absolute;
+  background-color: white;
+  top: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.meal-header img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.meal-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.meal-body h4{
+  margin: 0;
+}
+.meal-body .fav-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(197, 188, 188);
+}
+.meal-body .fav-btn.active{
+  color: rebeccapurple;
+}
+
+.meals h5{
+  text-align: center;
+}
+
+.popup-container{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-container.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.popup{
+  background-color: white;
+  max-width: 400px;
+  height: 650px;
+  width: 100%;
+  padding: 0 1rem;
+  border-radius: 5px;
+  /* position: relative; */
+  overflow: auto;
+}
+.meal-info h3{
+  text-align: center;
+  /* margin: 0; */
+}
+.meal-info p{
+  text-align: justify;
+}
+.meal-info img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.popup .close-popup{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
